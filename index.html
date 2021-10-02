@@ -13,8 +13,10 @@
     <link rel="stylesheet" href="style.css" />
     <script defer src="js/clock.js"></script>
     <script defer src="js/saveUsername.js"></script>
+    <script defer src="js/toDoList.js"></script>
     <title>Vanilla JS Momentum</title>
   </head>
+
   <body>
     <h1 class="clock">
       <span class="hours">00</span>
@@ -35,6 +37,15 @@
         <input type="text" />
         <button type="submit">Update</button>
       </form>
+    </div>
+
+    <div>
+      <h2>To Do List</h2>
+      <form class="form__todo">
+        <input type="text" min="1" required />
+        <button type="submit">Enter</button>
+      </form>
+      <ul class="todo-list"></ul>
     </div>
   </body>
 </html>

@@ -1,7 +1,42 @@
 :root {
-  --bg-color: #ffefb9;
+  --font-kr: 'Noto Sans KR', sans-serif;
+  --font-en: 'Lato', sans-serif;
+  --font-point: 'Alfa Slab One', cursive;
+
+  --bg-color: #eeebeb;
+  --text-color: #999;
+  --pink-color: #f892c1;
+  --yellow-color: #fedd47;
+  --green-color: #01b257;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  padding: 0;
+  list-style: none;
+}
+
+button:hover,
+button:focus,
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: inherit;
+}
+
+input {
+  border: none;
+  outline: none;
+  font-size: inherit;
 }
 
 body {
+  font-size: 62.5%;
   background-color: var(--bg-color);
 }

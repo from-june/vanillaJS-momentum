@@ -40,3 +40,25 @@ body {
   font-size: 62.5%;
   background-color: var(--bg-color);
 }
+
+.hidden {
+  display: none;
+}
+
+.colon {
+  animation: blinking 1000ms infinite;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

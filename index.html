@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script defer src="js/clock.js"></script>
+    <script defer src="js/saveUsername.js"></script>
     <title>Vanilla JS Momentum</title>
   </head>
   <body>
@@ -20,5 +21,20 @@
       <span class="colon">&#58;</span>
       <span class="minutes">00</span>
     </h1>
+
+    <div>
+      <form class="form__set__username hidden">
+        <input type="text" placeholder="Write your name." required min="1" />
+        <button type="submit" class="btn__save">Save</button>
+      </form>
+      <div>
+        <h2 class="username hidden"></h2>
+        <button class="btn__edit hidden">Edit</button>
+      </div>
+      <form class="form__edit__username hidden">
+        <input type="text" />
+        <button type="submit">Update</button>
+      </form>
+    </div>
   </body>
 </html>

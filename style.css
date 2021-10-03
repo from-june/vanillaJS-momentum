@@ -61,12 +61,33 @@ body {
   background-color: var(--bg-color);
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 56.25%;
+  }
+}
+
 main {
   display: flex;
   width: 80%;
   height: 80vh;
   background-color: #fff;
   margin: 5% auto;
+}
+
+@media screen and (max-width: 690px) {
+  main {
+    flex-direction: column;
+    height: 100%;
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  main {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .left-side {
@@ -78,6 +99,20 @@ main {
   width: 40%;
   height: 100%;
   background-position: center;
+}
+
+@media screen and (max-width: 690px) {
+  .left-side {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  main {
+    width: 100%;
+    height: 100vh;
+  }
 }
 
 .pictures img:first-child {
@@ -96,6 +131,12 @@ main {
   letter-spacing: -0.1em;
 }
 
+@media screen and (max-width: 768px) {
+  .clock {
+    font-size: 4rem;
+  }
+}
+
 .current-info {
   display: flex;
   flex-direction: column;
@@ -109,6 +150,14 @@ main {
   color: var(--white-color);
   font-size: 1.3rem;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .current-info {
+    width: 12rem;
+    height: 12rem;
+    font-size: 1.1rem;
+  }
 }
 
 .current-info__temp span {
@@ -149,11 +198,24 @@ main {
   height: 100%;
 }
 
+@media screen and (max-width: 690px) {
+  .right-side {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
 .right-side input {
   padding: 0.5rem 1rem;
   border-bottom: 2px solid var(--green-color);
   font-size: 1.2rem;
   caret-color: inherit;
+}
+
+@media screen and (max-width: 768px) {
+  .right-side input {
+    font-size: 1rem;
+  }
 }
 
 .right-side input::placeholder {
@@ -171,6 +233,12 @@ main {
   border-bottom: 1px dashed var(--bg-color);
 }
 
+@media screen and (max-width: 375px) {
+  .container__edit {
+    padding: 0.5rem;
+  }
+}
+
 .container__edit {
   display: flex;
   align-items: center;
@@ -178,10 +246,22 @@ main {
   margin-bottom: 0.5rem;
 }
 
+@media screen and (max-width: 375px) {
+  .container__edit {
+    flex-direction: column;
+  }
+}
+
 .container__edit .username {
   margin-right: 0.5rem;
   font-size: 3rem;
   font-weight: 100;
+}
+
+@media screen and (max-width: 375px) {
+  .container__edit .username {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .container__edit .username .username__highlight {
@@ -205,6 +285,18 @@ main {
   height: 70%;
 }
 
+@media screen and (max-width: 690px) {
+  .container__todo {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .container__todo {
+    height: 100%;
+  }
+}
+
 .container__todo h2 {
   text-transform: uppercase;
   font-size: 2rem;
@@ -220,6 +312,12 @@ main {
   width: 95%;
   padding: 1.5rem;
   overflow-y: scroll;
+}
+
+@media screen and (max-width: 690px) {
+  .container__todo .todo {
+    padding: 0.5rem;
+  }
 }
 
 .container__todo .form__todo {

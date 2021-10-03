@@ -23,7 +23,7 @@ const printToDo = function (toDo) {
   const task = document.createElement('h4');
   task.innerText = toDo.task;
   const btnDelete = document.createElement('button');
-  btnDelete.innerText = 'Delete';
+  btnDelete.innerText = 'Del';
   btnDelete.addEventListener('click', removeToDo);
 
   toDoList.appendChild(toDoItem);

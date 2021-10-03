@@ -2,7 +2,9 @@ const formUsername = document.querySelector('.form__set__username ');
 const createUsername = formUsername.querySelector('input');
 const btnSave = formUsername.querySelector('button');
 
-const usernameText = document.querySelector('.username');
+const editContainer = document.querySelector('.container__edit');
+const usernameContainer = document.querySelector('.username');
+const usernameText = usernameContainer.querySelector('.username__highlight');
 const btnEdit = document.querySelector('.btn__edit');
 
 const formEditUsername = document.querySelector('.form__edit__username');
@@ -17,11 +19,11 @@ const setUsername = function (event) {
   event.preventDefault();
 
   const usernameValue = createUsername.value;
-  usernameText.innerText = usernameValue;
+  usernameText.innerText = `${usernameValue} 😉`;
   localStorage.setItem(USERNAME_KEY, usernameValue);
 
   formUsername.classList.add(HIDDEN_CLASSNAME);
-  usernameText.classList.remove(HIDDEN_CLASSNAME);
+  usernameContainer.classList.remove(HIDDEN_CLASSNAME);
   btnEdit.classList.remove(HIDDEN_CLASSNAME);
 };
 
@@ -30,17 +32,18 @@ if (getUsername === null) {
   formUsername.classList.remove(HIDDEN_CLASSNAME);
   formUsername.addEventListener(SUBMIT_LISTENER, setUsername);
 } else {
-  usernameText.classList.remove(HIDDEN_CLASSNAME);
+  usernameContainer.classList.remove(HIDDEN_CLASSNAME);
   btnEdit.classList.remove(HIDDEN_CLASSNAME);
-  usernameText.innerText = `Hello ${getUsername}`;
+  usernameText.innerText = `${getUsername} 🥸`;
 }
 
 const onEditClick = function () {
-  if (editUsername.value === usernameText.innerText) {
-    editUsername.value = usernameText.innerText;
+  if (editUsername.value === usernameContainer.innerText) {
+    editUsername.value = usernameContainer.innerText;
   } else {
     editUsername.value = getUsername;
   }
+  editContainer.classList.add(HIDDEN_CLASSNAME);
   formEditUsername.classList.remove(HIDDEN_CLASSNAME);
 };
 
@@ -48,9 +51,10 @@ const handleEditName = function (event) {
   event.preventDefault();
 
   const editValue = editUsername.value;
-  usernameText.innerText = `Hello ${editValue}`;
+  usernameText.innerText = `${editValue} 🥸`;
   localStorage.setItem(USERNAME_KEY, editValue);
   formEditUsername.classList.add(HIDDEN_CLASSNAME);
+  editContainer.classList.remove(HIDDEN_CLASSNAME);
 };
 
 btnEdit.addEventListener('click', onEditClick);

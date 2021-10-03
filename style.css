@@ -4,10 +4,13 @@
   --font-point: 'Alfa Slab One', cursive;
 
   --bg-color: #eeebeb;
-  --text-color: #999;
-  --pink-color: #f892c1;
+  --text-color: #555;
+  --placeholoder-color: #d5d5d5;
+  --white-color: #fff;
+  --orange-color: #ffc456;
   --yellow-color: #fedd47;
   --green-color: #01b257;
+  --brown-color: #855f54;
 }
 
 * {
@@ -24,25 +27,103 @@ li {
 button:hover,
 button:focus,
 button {
+  padding: 0.4rem 0.8rem;
   border: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
   outline: none;
   background-color: transparent;
-  font-size: inherit;
+  font-size: 0.8rem;
+  font-family: var(--font-en);
+  font-weight: 300;
+  color: var(--text-color);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  align-items: flex-end;
 }
 
 input {
   border: none;
   outline: none;
   font-size: inherit;
+  margin-right: 0.5rem;
 }
 
 body {
+  font-family: var(--font-en);
   font-size: 62.5%;
+  font-weight: 300;
+  color: var(--text-color);
   background-color: var(--bg-color);
 }
 
-.hidden {
-  display: none;
+main {
+  display: flex;
+  width: 80%;
+  height: 80vh;
+  background-color: #fff;
+  margin: 5% auto;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 40%;
+  height: 100%;
+  background-position: center;
+}
+
+.pictures img:first-child {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.clock,
+.weather {
+  color: var(--white-color);
+}
+
+.clock {
+  font-size: 5rem;
+  letter-spacing: -0.1em;
+}
+
+.current-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  background-color: var(--brown-color);
+  font-family: var(--font-point);
+  color: var(--white-color);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.current-info__temp span {
+  font-size: 1rem;
+  vertical-align: top;
+  margin-left: 3px;
+}
+
+.current-info span {
+  display: flex;
+  align-items: center;
+}
+
+.current-info span i {
+  margin-right: 0.5rem;
 }
 
 .colon {
@@ -61,4 +142,118 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+.right-side {
+  width: 60%;
+  height: 100%;
+}
+
+.right-side input {
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid var(--green-color);
+  font-size: 1.2rem;
+  caret-color: inherit;
+}
+
+.right-side input::placeholder {
+  font-weight: 100;
+  font-size: 1rem;
+  color: var(--placeholoder-color);
+}
+
+.container__username {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px dashed var(--bg-color);
+}
+
+.container__edit {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-en);
+  margin-bottom: 0.5rem;
+}
+
+.container__edit .username {
+  margin-right: 0.5rem;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.container__edit .username .username__highlight {
+  font-family: var(--font-point);
+  font-size: 2.2rem;
+  color: var(--green-color);
+}
+
+.form__edit__username {
+  border: 1px dashed var(--bg-color);
+  border-radius: 3px;
+  padding: 1rem 1.5rem;
+}
+
+.container__todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  height: 70%;
+}
+
+.container__todo h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 0.5rem;
+}
+
+.container__todo .todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 95%;
+  padding: 1.5rem;
+  overflow-y: scroll;
+}
+
+.container__todo .form__todo {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.container__todo .form__todo div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container__todo .form__todo label {
+  background-color: var(--green-color);
+  color: var(--white-color);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.container__todo .todo-list li {
+  font-family: var(--font-kr);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.container__todo .todo-list li h4 {
+  margin-right: 0.5rem;
+}
+
+.hidden {
+  display: none;
 }

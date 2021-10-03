@@ -7,48 +7,84 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lato:ital,wght@0,300;1,100&family=Noto+Sans+KR:wght@300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lato:wght@100;300;700&family=Noto+Sans+KR:wght@300;400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
     <script defer src="js/clock.js"></script>
     <script defer src="js/saveUsername.js"></script>
     <script defer src="js/toDoList.js"></script>
-    <script defer src="js/showWeather.js"></script>
+    <script type="module" defer src="js/showWeather.js"></script>
+    <script type="module" defer src="js/randomPics.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <title>Vanilla JS Momentum</title>
   </head>
 
   <body>
-    <h1 class="clock">
-      <span class="hours">00</span>
-      <span class="colon">&#58;</span>
-      <span class="minutes">00</span>
-    </h1>
-
-    <div>
-      <form class="form__set__username hidden">
-        <input type="text" placeholder="Write your name." required min="1" />
-        <button type="submit" class="btn__save">Save</button>
-      </form>
-      <div>
-        <h2 class="username hidden"></h2>
-        <button class="btn__edit hidden">Edit</button>
+    <main>
+      <div class="left-side">
+        <div class="pictures"></div>
+        <h1 class="clock">
+          <span class="hours">00</span>
+          <span class="colon">&#58;</span>
+          <span class="minutes">00</span>
+        </h1>
+        <div class="current-info">
+          <span class="current-info__weather"> </span>
+          <span class="current-info__temp"> </span>
+          <span class="current-info__location"> </span>
+        </div>
       </div>
-      <form class="form__edit__username hidden">
-        <input type="text" />
-        <button type="submit">Update</button>
-      </form>
-    </div>
 
-    <div>
-      <h2>To Do List</h2>
-      <form class="form__todo">
-        <input type="text" min="1" required />
-        <button type="submit">Enter</button>
-      </form>
-      <ul class="todo-list"></ul>
-    </div>
+      <div class="right-side">
+        <div class="container__username">
+          <form class="form__set__username hidden">
+            <input
+              type="text"
+              placeholder="Write your name."
+              required
+              min="1"
+            />
+            <button type="submit" class="btn btn__save">Save</button>
+          </form>
+          <div class="container__edit">
+            <h2 class="username hidden">
+              Hello
+              <span class="username__highlight"></span>
+            </h2>
+            <button class="btn btn__edit hidden">Edit</button>
+          </div>
+          <form class="form__edit__username hidden">
+            <input type="text" />
+            <button type="submit">Update</button>
+          </form>
+        </div>
 
-    <div class="weather"></div>
+        <div class="container__todo">
+          <h2>To Do</h2>
+          <div class="todo">
+            <form class="form__todo">
+              <div>
+                <label for="task">Add to the to do list</label>
+                <input
+                  id="task"
+                  type="text"
+                  min="1"
+                  required
+                  placeholder="New task"
+                />
+              </div>
+              <button type="submit">Enter</button>
+            </form>
+            <ul class="todo-list"></ul>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

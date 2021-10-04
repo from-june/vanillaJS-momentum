@@ -11,11 +11,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
-    <script defer src="./js/clock.js"></script>
-    <script defer src="./js/saveUsername.js"></script>
-    <script defer src="./js/toDoList.js"></script>
-    <script type="module" defer src="./js/showWeather.js"></script>
-    <script type="module" defer src="./js/randomPics.js"></script>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -48,7 +43,8 @@
               type="text"
               placeholder="Write your name."
               required
-              min="1"
+              minlength="1"
+              maxlength="8"
             />
             <button type="submit" class="btn btn__save">Save</button>
           </form>
@@ -60,7 +56,7 @@
             <button class="btn btn__edit hidden">Edit</button>
           </div>
           <form class="form__edit__username hidden">
-            <input type="text" />
+            <input type="text" minlength="1" maxlength="8" required />
             <button type="submit">Update</button>
           </form>
         </div>
@@ -74,7 +70,7 @@
                 <input
                   id="task"
                   type="text"
-                  min="1"
+                  minlength="1"
                   required
                   placeholder="New task"
                 />
@@ -86,5 +82,11 @@
         </div>
       </div>
     </main>
+
+    <script src="./js/clock.js"></script>
+    <script src="./js/saveUsername.js"></script>
+    <script src="./js/toDoList.js"></script>
+    <script type="module" src="./js/showWeather.js"></script>
+    <script type="module" src="./js/randomPics.js"></script>
   </body>
 </html>

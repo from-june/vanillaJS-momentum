@@ -34,7 +34,7 @@ if (getUsername === null) {
 } else {
   usernameContainer.classList.remove(HIDDEN_CLASSNAME);
   btnEdit.classList.remove(HIDDEN_CLASSNAME);
-  usernameText.innerText = `${getUsername} 🥸`;
+  usernameText.innerText = `${getUsername} 😎`;
 }
 
 const onEditClick = function () {
@@ -50,7 +50,7 @@ const handleEditName = function (event) {
   event.preventDefault();
 
   const editValue = editUsername.value;
-  usernameText.innerText = `${editValue} 🥸`;
+  usernameText.innerText = `${editValue} 😎`;
   localStorage.setItem(USERNAME_KEY, editValue);
   formEditUsername.classList.add(HIDDEN_CLASSNAME);
   editContainer.classList.remove(HIDDEN_CLASSNAME);

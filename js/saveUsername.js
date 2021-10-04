@@ -38,8 +38,8 @@ if (getUsername === null) {
 }
 
 const onEditClick = function () {
-  if (editUsername.value === usernameContainer.innerText) {
-    editUsername.value = usernameContainer.innerText;
+  if (editUsername.value === '') {
+    editUsername.value = createUsername.value;
   } else {
     editUsername.value = getUsername;
   }

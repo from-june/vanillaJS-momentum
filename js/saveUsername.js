@@ -38,11 +38,10 @@ if (getUsername === null) {
 }
 
 const onEditClick = function () {
-  if (editUsername.value === '') {
+  if (editUsername.value === '' || getUsername === null)
     editUsername.value = createUsername.value;
-  } else {
-    editUsername.value = getUsername;
-  }
+  if (getUsername) editUsername.value = getUsername;
+
   editContainer.classList.add(HIDDEN_CLASSNAME);
   formEditUsername.classList.remove(HIDDEN_CLASSNAME);
 };

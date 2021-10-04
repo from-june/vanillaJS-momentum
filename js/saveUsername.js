@@ -40,7 +40,8 @@ if (getUsername === null) {
 const onEditClick = function () {
   if (editUsername.value === '' || getUsername === null)
     editUsername.value = createUsername.value;
-  if (getUsername) editUsername.value = getUsername;
+
+  editUsername.value = usernameText.innerText.slice(0, -3);
 
   editContainer.classList.add(HIDDEN_CLASSNAME);
   formEditUsername.classList.remove(HIDDEN_CLASSNAME);

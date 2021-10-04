@@ -233,12 +233,6 @@ main {
   border-bottom: 1px dashed var(--bg-color);
 }
 
-@media screen and (max-width: 375px) {
-  .container__edit {
-    padding: 0.5rem;
-  }
-}
-
 .container__edit {
   display: flex;
   align-items: center;
@@ -249,6 +243,8 @@ main {
 @media screen and (max-width: 375px) {
   .container__edit {
     flex-direction: column;
+    padding: 2em;
+    margin-bottom: 2rem;
   }
 }
 

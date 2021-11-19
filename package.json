@@ -1,0 +1,21 @@
+{
+  "name": "vanillajs-momentum",
+  "version": "1.0.0",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pak-fuse/vanillaJS-momentum.git"
+  },
+  "keywords": [
+    "vanillaJS"
+  ],
+  "author": "yell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pak-fuse/vanillaJS-momentum/issues"
+  },
+  "homepage": "https://pak-fuse.github.io/vanillaJS-momentum",
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
